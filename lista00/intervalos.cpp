@@ -2,7 +2,13 @@
 
 using namespace std;
 
-int main () {
+float porcetagem (int total, int numero)
+{
+    return 100*numero/total;
+}
+
+int main ()
+{
     int x;
     int counter_interval_one = 0;
     int counter_interval_two = 0;
@@ -28,10 +34,10 @@ int main () {
         counter_total++;
     }
 
-    cout << "Porcentagem de números no intervalo [0, 25): " << 100*counter_interval_one/counter_total <<endl;
-    cout << "Porcentagem de números no intervalo [25, 50): " << 100*counter_interval_two/counter_total <<endl;
-    cout << "Porcentagem de números no intervalo [50, 75): " << 100*counter_interval_three/counter_total <<endl;
-    cout << "Porcentagem de números no intervalo [75, 100]: " << 100*counter_interval_four/counter_total <<endl;
+    cout << "Porcentagem de números no intervalo [0, 25): " << porcetagem(counter_total, counter_interval_one) <<endl;
+    cout << "Porcentagem de números no intervalo [25, 50): " << porcetagem(counter_total, counter_interval_two)  <<endl;
+    cout << "Porcentagem de números no intervalo [50, 75): " << porcetagem(counter_total, counter_interval_three)  << endl;
+    cout << "Porcentagem de números no intervalo [75, 100]: " << porcetagem(counter_total, counter_interval_four)  << endl;
 
     return 0;
 }
