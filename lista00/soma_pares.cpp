@@ -17,6 +17,7 @@ int main ()
         }
 
         cout << "Soma: " << sum << endl;
+        cout << "Entre com dois valores inteiros ( Ctrl + d para encerrar ): " << endl;
     }
     return 0;
 }
