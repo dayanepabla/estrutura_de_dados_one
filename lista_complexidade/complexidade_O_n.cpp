@@ -6,16 +6,16 @@ using namespace std;
 
 int maxSum( int x[], int n )
 {
-	int i;
-	int max;
-	int acc = 0;
+    int i;
+    int max;
+    int acc = 0;
 
-	for ( i = 0;i < n;i++ )
+    for ( i = 0;i < n;i++ )
     {
-		acc+=x[i];
-		if(acc > max) max=acc;
-		if(acc < 0) acc=0;
-	}
+       acc+=x[i];
+       if(acc > max) max=acc;
+       if(acc < 0) acc=0;
+    }
 
     return max;
 }
@@ -24,19 +24,19 @@ int maxSum( int x[], int n )
 
 int main ()
 {
-	int n;
+    int n;
     int * x = NULL;
 
-	cin >> n;
+    cin >> n;
 
     x = new int[n];
 
-	for ( int c = 0; c<n; c++ )
+    for ( int c = 0; c<n; c++ )
     {
-		cin >> x[c];
-	}
+       cin >> x[c];
+    }
 
-	cout << "Resposta: " << maxSum(x, n) << endl;
+    cout << "Resposta: " << maxSum(x, n) << endl;
 
     return 0;
 
