@@ -24,13 +24,16 @@ int maxSum( int x[], int n )
 
 int main ()
 {
-	int n, x[n];
+	int n;
+    int * x = NULL;
 
-	cin>>n;
+	cin >> n;
+
+    x = new int[n];
 
 	for ( int c = 0; c<n; c++ )
     {
-		cin>>x[c];
+		cin >> x[c];
 	}
 
 	cout << "Resposta: " << maxSum(x, n) << endl;
