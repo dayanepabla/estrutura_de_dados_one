@@ -37,9 +37,6 @@ int main()
             cout << "Menor elemento: " << menor << " Posição: " << i << endl;
         }
     }
-    //cout << "Menor elemento do vetor: " << vetor[menor] << endl;
-    //cout << "Posição: " << vetor[i] << endl;
-
 
     return 0;
 }
