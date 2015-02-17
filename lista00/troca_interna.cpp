@@ -17,23 +17,23 @@ int main()
 
     for ( i = 0; i <= 19; i++ )
     {
-        cout << vetor[ i ] << " ";
+        cout << vetor[i] << " ";
     }
     cout << "]\n";
 
 
-    for ( i = 0; i <= 19; i++ )
+    for ( i = 0; i < 10; i++ )
     {
-        aux = vetor [i];
-        vetor[i] = vetor[i + 1];
-        vetor[i + 1] = aux;
+        aux = vetor[i];
+        vetor[i] = vetor[19 - i];
+        vetor[19 - i] = aux;
     }
 
     cout << "[";
 
     for ( i = 0; i <= 19; i++ )
     {
-        cout << vetor[ i ] << " ";
+        cout << vetor[i] << " ";
     }
     cout << "]\n";
 
