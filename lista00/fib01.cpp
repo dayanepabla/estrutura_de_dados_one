@@ -3,10 +3,11 @@
 using namespace std;
 
 void
-printVector( int A[ ], int sz )
+printVector( int A[ ], int s )
 {
+
     cout << ">>> [ ";
-    for ( int i(0); i < sz; ++i ){
+    for ( int i(0); i < s; ++i ){
         cout << A[ i ] << " ";
     }
     cout << "]\n";
@@ -23,18 +24,23 @@ fib( int limit, int * &A )
     while ( fib2 < limit )
     {
         fib2 = fib0 + fib1;
-        // cout << fib2 << " "; // imprimir na tela apenas para depurar
-        count++; // usado para determinar o comprimento da sÃ©rie.
+
+        count++;
         fib0 = fib1;
         fib1 = fib2;
     }
-    cout << endl; // descarrint acounint[count - 1];
+    cout << endl;
+
+    int acount = 0;
+    A = new int[count - 1];
 
     fib0 = 1, fib1 = 0, fib2 = 1;
 
     while ( fib2 < limit )
     {
         fib2 = fib0 + fib1;
+        A[acount] = fib2;
+        acount++;
         fib0 = fib1;
         fib1 = fib2;
     }
@@ -47,17 +53,17 @@ int main ()
     int iLimit;
     int *A = NULL;
 
-    cout << ">>> Informe um número inteiro (n > 0): ";
+    cout << ">>> Indique o limite para a serie de Fibonacci (n > 0): ";
     cin >> iLimit;
 
     if ( iLimit < 0 )
     {
-        cout << ">>> Sorry, only positive integers accepted. Aborting...\n";
+        cout << ">>> Apenas números positovos, por favor.\n";
     }
     else
     {
         int iSz = fib( iLimit, A );
-        cout << ">>> Fibonacci" << iLimit << " : \n";
+        cout << ">>> Série de Fibonacci até: " << iLimit << " is: \n";
         printVector( A, iSz );
     }
 
