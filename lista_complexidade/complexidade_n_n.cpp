@@ -1,4 +1,4 @@
-// soma máxima - complexidade O(n)
+// soma máxima - complexidade n(n)
 
 #include <iostream>
 using namespace std;
@@ -6,15 +6,20 @@ using namespace std;
 
 int maxSum( int x[], int n )
 {
-    int i;
+
+    register int i, j;
     int max = 0;
-    int acc = 0;
+    int sum = 0;
 
     for ( i = 0; i < n; i++ )
     {
-       acc += x[i];
-       if ( acc > max ) max = acc;
-       if ( acc < 0 ) acc = 0;
+        for ( j = 0; j <= i; i++ )
+        {
+            sum += x[j];
+        }
+
+        if ( sum > max ) max = sum;
+        if ( sum < 0) sum = 0;
     }
 
     return max;
@@ -41,5 +46,3 @@ int main ()
     return 0;
 
 }
-
-
