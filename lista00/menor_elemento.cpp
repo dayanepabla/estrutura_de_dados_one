@@ -5,8 +5,7 @@ using namespace std;
 int main()
 {
     float vetor[20];
-    int i;
-    int menor;
+    int i, menor;
 
     for ( i = 0; i <= 19; i++)
     {
@@ -15,25 +14,33 @@ int main()
     }
 
     cout << "[";
+
     for ( i = 0; i <= 19; i++ )
     {
-
         cout << vetor[ i ] << " ";
     }
-
     cout << "]\n";
+
+    menor = vetor[0];
     for (i = 0; i <= 19; i++)
     {
-        if ( vetor[i] < vetor [i + 1] )
+        if ( vetor[i] <= menor )
         {
             menor = vetor[i];
         }
-
     }
 
-    cout << "Menor elemento do vetor: " << vetor[menor] << endl;
-    cout << "Posição: " << vetor[i] << endl;
+    for ( i = 0; i <= 19; i++)
+    {
+        if ( vetor[i] == menor)
+        {
+            cout << "Menor elemento: " << menor << " Posição: " << i << endl;
+        }
+    }
+    //cout << "Menor elemento do vetor: " << vetor[menor] << endl;
+    //cout << "Posição: " << vetor[i] << endl;
 
 
     return 0;
 }
+
