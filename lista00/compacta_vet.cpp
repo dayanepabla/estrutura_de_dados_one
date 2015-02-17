@@ -23,11 +23,18 @@ int main()
 
     for (i = 0; i <= 19; i++)
     {
-        if (i <= 0)
+        if (C[i] <= 0)
         {
-            aux = C[i];
-            C[i] = C[i - 1];
-            C[i - 1] = aux;
+            for (int j = i; j <= 19; j++)
+            {
+                if (C[j] > 0)
+                {
+                    aux = C[i];
+                    C[i] = C[j];
+                    C[j] = aux;
+                    break;
+                }
+            }
         }
     }
 
