@@ -10,7 +10,6 @@ int main()
 
     for ( i = 0; i <= 19; i++)
     {
-
         cout << "Informe o número " << i + 1 << endl;
         cin >> vetor[i];
     }
@@ -28,11 +27,12 @@ int main()
         if ( vetor[i] < vetor [i + 1] )
         {
             menor = vetor[i];
-            cout << "Menor elemento do vetor: " << menor << endl;
-            cout << "Posição: " << vetor[i] << endl;
         }
 
     }
+
+    cout << "Menor elemento do vetor: " << vetor[menor] << endl;
+    cout << "Posição: " << vetor[i] << endl;
 
 
     return 0;
