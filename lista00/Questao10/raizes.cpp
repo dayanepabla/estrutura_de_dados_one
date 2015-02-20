@@ -1,5 +1,5 @@
 #include <cmath>
-#include "q10.h"
+#include "raizes.h"
 
 #define EPS 0.00001
 
@@ -13,11 +13,9 @@ int raizes (float a, float b, float c, float& x1, float& x2) {
     //} else if( fbas( delta - 0.f ) < EPS ) {
     } else if( delta > 0.f ) // duas raizes reais.
 
-
         return 2;
     }
     else { // Apenas 1 raiz real, ou seja, equacao de 1ro grau.
-
 
         return 1;
     }
