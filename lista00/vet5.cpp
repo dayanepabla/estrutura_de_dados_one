@@ -2,39 +2,51 @@
 
 using namespace std;
 
+void printVector( const int* a );
+
 int main()
 {
-    int A[5];
-    int B[5];
-    int i, num;
-    int cont = 0;
+    int *A;
+    int *B;
+    int i, number, a_index = 0, b_index = 0;
 
-    for ( i = 0; i < 30; i++)
+    A = new int[5];
+    B = new int[5];
+
+    for ( i = 0; i < 30; i++ )
     {
         cout << "Informe o número " << i + 1 << endl;
-        cin >> num;
-        while (cont < 5)
+        cin >> number;
+
+        if ( number % 2 == 0 )
         {
-
-            if (num % 2 == 0)
+            A[a_index++] = number;
+            if (a_index > 5)
+            {
+                a_index = 0;
+                printVector(A);
+            }
+        }
+        else
         {
-
-            A[i] = num;
-            cout << "[";
-            cout << A[i] << " ";
-            cout << "]\n";
-        } else {
-
-            B[i] = num;
-            cout << "[";
-            cout << B[i] << " ";
-            cout << "]\n";
+            B[b_index++] = number;
+            if (b_index > 5)
+            {
+                b_index = 0;
+                printVector(B);
+            }
         }
-            cont++;
-        }
-
-
     }
 
     return 0;
+}
+
+void printVector( const int* a )
+{
+    cout << "[ ";
+    for (int i = 0; i < 5; ++i)
+    {
+        cout << a[i] << " ";
+    }
+    cout << "]" << endl;
 }
