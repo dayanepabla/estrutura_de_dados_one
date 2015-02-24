@@ -58,12 +58,12 @@ int main ()
 
     if ( iLimit < 0 )
     {
-        cout << ">>> Apenas números positovos, por favor.\n";
+        cout << ">>> Apenas números positivos, por favor.\n";
     }
     else
     {
         int iSz = fib( iLimit, A );
-        cout << ">>> Série de Fibonacci até: " << iLimit << " is: \n";
+        cout << ">>> Série de Fibonacci até: " << iLimit << " é: \n";
         printVector( A, iSz );
     }
 
