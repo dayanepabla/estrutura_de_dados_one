@@ -115,7 +115,7 @@ void showClockResults( const clock_t & begin, const clock_t & end )
     // Exibe tempo de execução em segundos.
     cout << (double)(end - begin)/CLOCKS_PER_SEC << endl;
 
-    // cout << "begin (CPU): " << begin << endl;
-    // cout << "end (CPU): " << end << endl;
-    // cout << "elapsed CPU time: " << (end - begin) / CLOCKS_PER_SEC << " second(s)\n";
+    cout << "begin (CPU): " << begin << endl;
+    cout << "end (CPU): " << end << endl;
+    cout << "elapsed CPU time: " << (end - begin) / CLOCKS_PER_SEC << " second(s)\n";
 }
