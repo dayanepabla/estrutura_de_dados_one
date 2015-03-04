@@ -31,7 +31,7 @@ int main ( int argc, char* argv[])
     // Assim, garantimos que os valores para o vetor a mudem em cada execução.
     srand(std::time(0));
 
-    for ( int c = 0; c < 1000000000; c++ )
+    for ( long int c = 0; c < 100000000; c++ )
     {
         a.push_back(rand());
     }
@@ -113,7 +113,7 @@ int maxSubSumQuadratic( const vector<int> & a )
 void showClockResults( const clock_t & begin, const clock_t & end )
 {
     // Exibe tempo de execução em segundos.
-    cout << (end - begin) / CLOCKS_PER_SEC << endl;
+    cout << (double)(end - begin)/CLOCKS_PER_SEC << endl;
 
     // cout << "begin (CPU): " << begin << endl;
     // cout << "end (CPU): " << end << endl;
