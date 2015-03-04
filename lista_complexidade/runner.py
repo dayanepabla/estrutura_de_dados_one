@@ -38,7 +38,7 @@ def print_summary(output, param):
     lines = output.split()
     times = [float(x) for x in lines]
 
-    print "Average time: %i" % average_time(times)
+    print "Average time: %f" % average_time(times)
     print "Execution times: %s" % ', '.join(lines)
 
 
