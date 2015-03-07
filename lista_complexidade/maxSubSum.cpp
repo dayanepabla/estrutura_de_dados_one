@@ -31,7 +31,7 @@ int main ( int argc, char* argv[])
     // Assim, garantimos que os valores para o vetor a mudem em cada execução.
     srand(std::time(0));
 
-    for ( long int c = 0; c < 100000000; c++ )
+    for ( long int c = 0; c < 100; c++ )
     {
         a.push_back(rand());
     }
