@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>My Project: Código-Fonte de rect.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&#160;membro</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valores da enumeração</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Amigos</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">rect.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="rect_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* ========================================================================= */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/* DEFINITION OF CONSTANTS AND MACROS                                    */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* ------------------------------------------------------------------------- */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef RECT_H</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RECT_H</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rect__except_8h.html">rect_except.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/* ========================================================================= */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/* CLASS DECLARATION                                                         */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/* ------------------------------------------------------------------------- */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>rectangle {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classrectangle_1_1Rect.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrectangle_1_1Rect.html">Rect</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">// CONSTRUCTORS AND DESTRUCTORS</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrectangle_1_1Rect.html#a106f73f341700ba494effd45577c0507">Rect</a> ( <span class="keyword">const</span> <span class="keywordtype">int</span> _iX=0, <span class="keyword">const</span> <span class="keywordtype">int</span> _iY=0, <span class="keyword">const</span> <span class="keywordtype">int</span> _iW=0, <span class="keyword">const</span> <span class="keywordtype">int</span> _iH=0 );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classrectangle_1_1Rect.html#a106f73f341700ba494effd45577c0507">Rect</a> ( <span class="keyword">const</span> <a class="code" href="classrectangle_1_1Rect.html">Rect</a>&amp; tCObj );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classrectangle_1_1Rect.html#acff62a31b8bafc67508dbf7f719cf932">~Rect</a> ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// ACESSOR methods</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classrectangle_1_1Rect.html#a8db7151039db46d0b853ec7ad5651b82">   54</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classrectangle_1_1Rect.html#a8db7151039db46d0b853ec7ad5651b82">getX</a>( <span class="keywordtype">void</span> )<span class="keyword"> const </span>{ <span class="keywordflow">return</span> miX; };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classrectangle_1_1Rect.html#a8fe066a16e1d9ce9978da34837f9912a">   58</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classrectangle_1_1Rect.html#a8fe066a16e1d9ce9978da34837f9912a">getY</a>( <span class="keywordtype">void</span> )<span class="keyword"> const </span>{ <span class="keywordflow">return</span> miY; };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classrectangle_1_1Rect.html#a474a45df7293c6c5512463bb5a19f60b">   62</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classrectangle_1_1Rect.html#a474a45df7293c6c5512463bb5a19f60b">getWidth</a>( <span class="keywordtype">void</span> )<span class="keyword"> const </span>{ <span class="keywordflow">return</span> miW; };</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classrectangle_1_1Rect.html#a0529af65f975bf15e9807923ba0ab8e6">   66</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classrectangle_1_1Rect.html#a0529af65f975bf15e9807923ba0ab8e6">getHeight</a>( <span class="keywordtype">void</span> )<span class="keyword"> const </span>{ <span class="keywordflow">return</span> miH; };</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classrectangle_1_1Rect.html#a8e876f3cf8c84f666a27e4ac53002b3e">   73</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrectangle_1_1Rect.html#a8e876f3cf8c84f666a27e4ac53002b3e">getData</a>( <span class="keywordtype">int</span> &amp;_iX, <span class="keywordtype">int</span> &amp;_iY, <span class="keywordtype">int</span> &amp;_iW, <span class="keywordtype">int</span> &amp;_iH )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">  </span>{ _iX = miX; _iY = miY; _iW = miW; _iH = miH; };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classrectangle_1_1Rect.html#ad5766881744587377fe0e9964d928e1d">area</a> ( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">// MUTATORS methods</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrectangle_1_1Rect.html#af388209e7f7a5329eb7b906f254a8a9a">setData</a>( <span class="keyword">const</span> <span class="keywordtype">int</span> _iX, <span class="keyword">const</span> <span class="keywordtype">int</span> _iY, <span class="keyword">const</span> <span class="keywordtype">int</span> _iW, <span class="keyword">const</span> <span class="keywordtype">int</span> _iH );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// OPERATORS OVERLOADING - These are the only operatos that have to be part of the class.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="classrectangle_1_1Rect.html">Rect</a>&amp; <a class="code" href="classrectangle_1_1Rect.html#a65edca18dfba7e1693568d5f3e819d26">operator= </a>( <span class="keyword">const</span> <a class="code" href="classrectangle_1_1Rect.html">Rect</a>&amp; rhs );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">int</span>&amp; <a class="code" href="classrectangle_1_1Rect.html#ab85de12f892ba96201f4174315b42732">operator[] </a>( <span class="keyword">const</span> <span class="keywordtype">int</span> tiIdx );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="classrectangle_1_1Rect.html#ab85de12f892ba96201f4174315b42732">operator[] </a>( <span class="keyword">const</span> <span class="keywordtype">int</span> tiIdx ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// FRIEND METHODS</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">friend</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="classrectangle_1_1Rect.html#a59e0c8f322425fc2cc0c48cb403c4d5e">operator== </a>( <span class="keyword">const</span> <a class="code" href="classrectangle_1_1Rect.html">Rect</a>&amp; lhs, <span class="keyword">const</span> <a class="code" href="classrectangle_1_1Rect.html">Rect</a>&amp; rhs );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">friend</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="classrectangle_1_1Rect.html#a51e713e2232957a74ffa3cab0f41ab47">operator!= </a>( <span class="keyword">const</span> <a class="code" href="classrectangle_1_1Rect.html">Rect</a>&amp; lhs, <span class="keyword">const</span> <a class="code" href="classrectangle_1_1Rect.html">Rect</a>&amp; rhs );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classrectangle_1_1Rect.html#a2ec7afc82beae7cecb72a829b22e4054">   99</a></span>&#160;  <span class="keyword">inline</span> <span class="keyword">friend</span> std::ostream &amp;<a class="code" href="classrectangle_1_1Rect.html#a2ec7afc82beae7cecb72a829b22e4054">operator&lt;&lt; </a>(std::ostream&amp; _os, <span class="keyword">const</span> <a class="code" href="classrectangle_1_1Rect.html">Rect</a>&amp; _CRec)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      _os &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; _CRec.miX &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; _CRec.miY &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; _CRec.miW &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; _CRec.miH &lt;&lt; <span class="stringliteral">&quot; ]&quot;</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordflow">return</span> _os;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">int</span> miX;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">int</span> miY;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">int</span> miW;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">int</span> miH;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02a791ad52b314764b48b5591fd780ef01d">  118</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02">field</a> { <a class="code" href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02abfd646e70d5cb6131897257d881c2d74">X</a>=0, <a class="code" href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02a791ad52b314764b48b5591fd780ef01d">Y</a>=1, <a class="code" href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02a4391d7047d7c16bf113e2049bd552a0a">W</a>=2, <a class="code" href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02ad988b7f76e5e524c2f3914e35c701bc8">H</a>=3 };</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;} <span class="comment">// namespace rectangle</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif // RECT_H</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">/* ---------------------- [ End of the rect.h header ] -------------------- */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">/* ======================================================================== */</span></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_a51e713e2232957a74ffa3cab0f41ab47"><div class="ttname"><a href="classrectangle_1_1Rect.html#a51e713e2232957a74ffa3cab0f41ab47">rectangle::Rect::operator!=</a></div><div class="ttdeci">friend const bool operator!=(const Rect &amp;lhs, const Rect &amp;rhs)</div><div class="ttdoc">Sobrecarga do operador relacional de desigualdade. </div><div class="ttdef"><b>Definition:</b> rect.cpp:219</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_aadf60e07e4109c5fd25992fa057f8f02"><div class="ttname"><a href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02">rectangle::Rect::field</a></div><div class="ttdeci">field</div><div class="ttdoc">Posições dos campos. </div><div class="ttdef"><b>Definition:</b> rect.h:118</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_a0529af65f975bf15e9807923ba0ab8e6"><div class="ttname"><a href="classrectangle_1_1Rect.html#a0529af65f975bf15e9807923ba0ab8e6">rectangle::Rect::getHeight</a></div><div class="ttdeci">int getHeight(void) const </div><div class="ttdoc">Recupera a altura do retângulo. </div><div class="ttdef"><b>Definition:</b> rect.h:66</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_af388209e7f7a5329eb7b906f254a8a9a"><div class="ttname"><a href="classrectangle_1_1Rect.html#af388209e7f7a5329eb7b906f254a8a9a">rectangle::Rect::setData</a></div><div class="ttdeci">void setData(const int _iX, const int _iY, const int _iW, const int _iH)</div><div class="ttdoc">Atribui novos valores aos campos do retângulo. </div><div class="ttdef"><b>Definition:</b> rect.cpp:98</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_ad5766881744587377fe0e9964d928e1d"><div class="ttname"><a href="classrectangle_1_1Rect.html#ad5766881744587377fe0e9964d928e1d">rectangle::Rect::area</a></div><div class="ttdeci">const int area(void) const </div><div class="ttdoc">Recupera a área do retângulo. </div><div class="ttdef"><b>Definition:</b> rect.cpp:126</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_a8fe066a16e1d9ce9978da34837f9912a"><div class="ttname"><a href="classrectangle_1_1Rect.html#a8fe066a16e1d9ce9978da34837f9912a">rectangle::Rect::getY</a></div><div class="ttdeci">int getY(void) const </div><div class="ttdoc">Recupera a coordenada Y do vértice do retângulo. </div><div class="ttdef"><b>Definition:</b> rect.h:58</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_a474a45df7293c6c5512463bb5a19f60b"><div class="ttname"><a href="classrectangle_1_1Rect.html#a474a45df7293c6c5512463bb5a19f60b">rectangle::Rect::getWidth</a></div><div class="ttdeci">int getWidth(void) const </div><div class="ttdoc">Recupera a largura do retângulo. </div><div class="ttdef"><b>Definition:</b> rect.h:62</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_ab85de12f892ba96201f4174315b42732"><div class="ttname"><a href="classrectangle_1_1Rect.html#ab85de12f892ba96201f4174315b42732">rectangle::Rect::operator[]</a></div><div class="ttdeci">int &amp; operator[](const int tiIdx)</div><div class="ttdoc">Sobrecarga do operador de indexação, com suporte a atribuição (usado como lhs). </div><div class="ttdef"><b>Definition:</b> rect.cpp:161</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_aadf60e07e4109c5fd25992fa057f8f02abfd646e70d5cb6131897257d881c2d74"><div class="ttname"><a href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02abfd646e70d5cb6131897257d881c2d74">rectangle::Rect::X</a></div><div class="ttdef"><b>Definition:</b> rect.h:118</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_a65edca18dfba7e1693568d5f3e819d26"><div class="ttname"><a href="classrectangle_1_1Rect.html#a65edca18dfba7e1693568d5f3e819d26">rectangle::Rect::operator=</a></div><div class="ttdeci">Rect &amp; operator=(const Rect &amp;rhs)</div><div class="ttdoc">Sobrecarga do operador de atribuição. </div><div class="ttdef"><b>Definition:</b> rect.cpp:138</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html"><div class="ttname"><a href="classrectangle_1_1Rect.html">rectangle::Rect</a></div><div class="ttdef"><b>Definition:</b> rect.h:41</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_a106f73f341700ba494effd45577c0507"><div class="ttname"><a href="classrectangle_1_1Rect.html#a106f73f341700ba494effd45577c0507">rectangle::Rect::Rect</a></div><div class="ttdeci">Rect(const int _iX=0, const int _iY=0, const int _iW=0, const int _iH=0)</div><div class="ttdoc">Construtor padrão. </div><div class="ttdef"><b>Definition:</b> rect.cpp:55</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_a59e0c8f322425fc2cc0c48cb403c4d5e"><div class="ttname"><a href="classrectangle_1_1Rect.html#a59e0c8f322425fc2cc0c48cb403c4d5e">rectangle::Rect::operator==</a></div><div class="ttdeci">friend const bool operator==(const Rect &amp;lhs, const Rect &amp;rhs)</div><div class="ttdoc">Sobrecarga do operador relacional de igualdade. </div><div class="ttdef"><b>Definition:</b> rect.cpp:208</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_acff62a31b8bafc67508dbf7f719cf932"><div class="ttname"><a href="classrectangle_1_1Rect.html#acff62a31b8bafc67508dbf7f719cf932">rectangle::Rect::~Rect</a></div><div class="ttdeci">virtual ~Rect(void)</div><div class="ttdoc">Destrutor padrão: faz nada. </div><div class="ttdef"><b>Definition:</b> rect.cpp:85</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_a2ec7afc82beae7cecb72a829b22e4054"><div class="ttname"><a href="classrectangle_1_1Rect.html#a2ec7afc82beae7cecb72a829b22e4054">rectangle::Rect::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;_os, const Rect &amp;_CRec)</div><div class="ttdoc">Sobrecarga do operador &amp;lt;&amp;lt;, que faz com que seja impresso o retângulo na forma: [ x, y, Width, Height ]. </div><div class="ttdef"><b>Definition:</b> rect.h:99</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_aadf60e07e4109c5fd25992fa057f8f02ad988b7f76e5e524c2f3914e35c701bc8"><div class="ttname"><a href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02ad988b7f76e5e524c2f3914e35c701bc8">rectangle::Rect::H</a></div><div class="ttdef"><b>Definition:</b> rect.h:118</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_a8e876f3cf8c84f666a27e4ac53002b3e"><div class="ttname"><a href="classrectangle_1_1Rect.html#a8e876f3cf8c84f666a27e4ac53002b3e">rectangle::Rect::getData</a></div><div class="ttdeci">void getData(int &amp;_iX, int &amp;_iY, int &amp;_iW, int &amp;_iH) const </div><div class="ttdoc">Recupera as coordeadas do vértice e dimensões (W, H) do retângulo. </div><div class="ttdef"><b>Definition:</b> rect.h:73</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_aadf60e07e4109c5fd25992fa057f8f02a791ad52b314764b48b5591fd780ef01d"><div class="ttname"><a href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02a791ad52b314764b48b5591fd780ef01d">rectangle::Rect::Y</a></div><div class="ttdef"><b>Definition:</b> rect.h:118</div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_aadf60e07e4109c5fd25992fa057f8f02a4391d7047d7c16bf113e2049bd552a0a"><div class="ttname"><a href="classrectangle_1_1Rect.html#aadf60e07e4109c5fd25992fa057f8f02a4391d7047d7c16bf113e2049bd552a0a">rectangle::Rect::W</a></div><div class="ttdef"><b>Definition:</b> rect.h:118</div></div>
+<div class="ttc" id="rect__except_8h_html"><div class="ttname"><a href="rect__except_8h.html">rect_except.h</a></div></div>
+<div class="ttc" id="classrectangle_1_1Rect_html_a8db7151039db46d0b853ec7ad5651b82"><div class="ttname"><a href="classrectangle_1_1Rect.html#a8db7151039db46d0b853ec7ad5651b82">rectangle::Rect::getX</a></div><div class="ttdeci">int getX(void) const </div><div class="ttdoc">Recupera a coordenada X do vértice do retângulo. </div><div class="ttdef"><b>Definition:</b> rect.h:54</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 27 de Fevereiro de 2015 19:44:17 para My Project por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>
