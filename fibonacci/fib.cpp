@@ -1,6 +1,6 @@
 /**
- * Altere e complete o programa de maneira que ele seja capaz de calcular a sÃ©rie
- * de Fibonacci atÃ© 10^19 ou 10000000000000000000.
+ * Altere e complete o programa de maneira que ele seja capaz de calcular a série
+ * de Fibonacci até 10^19 ou 10000000000000000000.
  */
 
 #include <iostream>
@@ -11,9 +11,9 @@ using namespace std;
 
 //----------------------------------------------------------------------------------------
 //! Imprime um vetor de inteiros unsigned long longos sem sinal.
-/*! Esta funÃ§Ã£o imprime na saÃ­da padrÃ£o um vetor de inteiros cujo tamanho Ã© passado como
+/*! Esta função imprime na saÃída padrão um vetor de inteiros cujo tamanho é passado como
  *  argumento.
- *  @param A O vetor a ser impresso na saÃ­da padrÃ£o.
+ *  @param A O vetor a ser impresso na saída padrão.
  *  @param sz O tamanho do vetor passado como argumento.
  */
 void
@@ -29,13 +29,13 @@ printArray( unsigned long long int A[ ], unsigned long long int sz )
 
 //----------------------------------------------------------------------------------------
 //! Gera a sequencia de Fibonacci em um vetor atÃ© um limite informado.
-/*! Esta funÃ§Ã£o gera em um vetor alocado dinamicamente a sÃ©rie de Fibonacci atÃ©
- *  antes de atingir um limite inteiro passado por parÃ¢metro.
+/*! Esta função gera em um vetor alocado dinamicamente a série de Fibonacci até
+ *  antes de atingir um limite inteiro passado por parâmetro.
  *  Por exemplo, se limite = 15, o vetor gerado deve ser [ 1 1 2 3 5 8 13 ], visto
- *  que o Ãºltimo elemento da sÃ©rie Ã© 13 < limite (=15).
+ *  que o último elemento da sÃ©rie Ã© 13 < limite (=15).
  *
- *  @param limit O limite inteiro que determina o fim da sÃ©rie.
- *  @param A Pointeiro que deverÃ¡ conter o vetor com a sÃ©rie.
+ *  @param limit O limite inteiro que determina o fim da série.
+ *  @param A Pointeiro que deverá conter o vetor com a série.
  */
 unsigned long long int
 fib( unsigned long long int limit, unsigned long long int * &A )
@@ -48,7 +48,7 @@ fib( unsigned long long int limit, unsigned long long int * &A )
     {
         fib2 = fib0 + fib1;
         // cout << fib2 << " "; // imprimir na tela apenas para depurar
-        count++; // usado para determinar o comprimento da sÃ©rie.
+        count++; // usado para determinar o comprimento da série.
         fib0 = fib1;
         fib1 = fib2;
     }
