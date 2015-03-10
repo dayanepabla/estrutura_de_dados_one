@@ -1,4 +1,4 @@
-"# Exercícios sobre ordenação"
+# Exercícios sobre ordenação
 
 Descrição:
 
