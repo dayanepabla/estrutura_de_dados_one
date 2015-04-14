@@ -1,14 +1,14 @@
 CC=g++
-CFLAGS=-Wall -c
+CFLAGS=-Wall -std=c++11 -c
 EXECUTABLE=sorting
 
 
 all: $(EXECUTABLE)
 
-sorting: main.o selection-sort.o quick-sort.o insertion-sort.o bubble-sort.o utils.o
+sorting: main.o
 	$(CC) utils.o main.o selection-sort.o -o $(EXECUTABLE)
 
-main.o: utils.o src/main.cpp
+main.o: utils.o src/main.cpp selection-sort.o quick-sort.o insertion-sort.o bubble-sort.o utils.o
 	$(CC) $(CFLAGS) src/main.cpp
 
 utils.o: src/utils.h src/utils.cpp

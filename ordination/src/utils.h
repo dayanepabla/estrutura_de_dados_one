@@ -4,6 +4,8 @@
 #include <vector>
 #include <iostream>
 
+#include "rectangle.h"
+
 
 void usage();
 
@@ -31,5 +33,7 @@ void v_print(std::vector<T>& v)
 
   std::cout << "]" << std::endl;
 }
+
+void v_rectangle_print(std::vector<Rectangle>& v);
 
 #endif
