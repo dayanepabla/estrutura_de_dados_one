@@ -6,9 +6,18 @@ using std::cout;
 
 
 int main ( void ) {
-    SNPtr pHead = NULL;// nullptr;
+    SNPtr pHead = nullptr;// nullptr;
 
     pushFront( pHead, 1 );
+    pushFront( pHead, 3 );
+    pushFront( pHead, 5 );
+    pushFront( pHead, 7 );
+    print( pHead );
+
+    // Testando front()/back()
+    int ret
+
+
 
     cout << "\n\n>>> Normal exiting...\n";
     return EXIT_SUCCESS;
