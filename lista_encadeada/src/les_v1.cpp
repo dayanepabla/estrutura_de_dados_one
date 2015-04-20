@@ -183,15 +183,15 @@ bool popFront( SNPtr & _pAIL, int & _retrievedVal )
 
 bool popBack( SNPtr & _pAIL, int& _retrievedVal )
 {
-    SNPtr pAux = _pAIL;
-    SNPtr pNext = NULL;
+    // SNPtr pAux = _pAIL;
+    // SNPtr pNext = NULL;
 
-    if ( _pAIL == NULL )
-        return false;
-    while ( _pAIL != NULL )
-    {
+    // if ( _pAIL == NULL )
+    //     return false;
+    // while ( _pAIL != NULL )
+    // {
 
-    }
+    // }
 
     return true;
 }
@@ -199,18 +199,70 @@ bool popBack( SNPtr & _pAIL, int& _retrievedVal )
 
 SNPtr find( const SNPtr _pAIL, int _targetVal )
 {
-    return NULL;
+    if ( empty( _pAIL) )
+        return NULL;
+
+    SNPtr pFound = NULL;
+    SNPtr pAux = _pAIL;
+
+    while (pAux->mpNext != NULL && pAux->miData != _targetVal)
+    {
+        if ( pAux->miData == _targetVal )
+        {
+            pFound = pAux;
+            break;
+        }
+
+        pFound = pAux;
+        pAux = pAux->mpNext;
+    }
+
+    return pFound;
 }
 
 
 bool insert( SNPtr & _pAIL, SNPtr _pAnte, int _newVal )
 {
+    SLLNode *ptNew( NULL );
+    try
+    {
+        ptNew = new SLLNode;
+        ptNew->miData = _newVal;
+    }
+    catch ( std:: bad_alloc e)
+    {
+        std:: cerr << "[pushBack()]: Falha de alocação de um novo nó!";
+        throw e;
+    };
+
+    if ( _pAnte == NULL )
+    {
+        _pAIL = ptNew;
+    }
+    else
+    {
+        ptNew->mpNext = _pAnte->mpNext;
+        _pAnte->mpNext = ptNew;
+    }
+
     return true;
 }
 
 
 bool remove( SNPtr & _pAIL, SNPtr _pAnte, int & _retrievedVal )
 {
+    if ( _pAnte == NULL )
+    {
+        _pAIL = NULL;
+    }
+    else
+    {
+        SNPtr pAfter = NULL;
+
+        pAfter = _pAnte->mpNext;
+        _pAnte->mpNext = pAfter->mpNext;
+    }
+
     return true;
 }
 
