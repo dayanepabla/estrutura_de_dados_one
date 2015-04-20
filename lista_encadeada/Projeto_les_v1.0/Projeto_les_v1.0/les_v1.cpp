@@ -11,14 +11,14 @@ using namespace std;
  */
 void print( const SNPtr _pAIL )
 {
-    SLLNode * pWork = _pAIL // SLLNOde * pWork;
+    SLLNode * pWork = _pAIL; // SLLNode * pWork;
     std::cout << "{ ";
-    while ( pWork != nullptr )
+    while ( pWork != NULL )
     {
         std::cout << pWork->miData << " ";
         pWork = pWork->mpNext;
     }
-    if ( _pAIL == nullptr )
+    if ( _pAIL == NULL )
         std::cout <<"<empty>";
     std::cout << "}\n";
 }
@@ -32,7 +32,7 @@ int length( const SNPtr _pAIL )
 {
     int ct(0);
     SLLNode * pWork = _pAIL;
-    while ( pWork != nullptr )
+    while ( pWork != NULL )
     {
         ct++;
         pWork = pWork->mpNext;
@@ -44,8 +44,7 @@ int length( const SNPtr _pAIL )
 
 bool empty( const SNPtr _pAIL )
 {
-    return ( _pAIL == nullptr );
-
+    return ( _pAIL == NULL );
 }
 
 
@@ -53,20 +52,20 @@ void clear( SNPtr & _pAIL )
 {
     SLLNode * pAux;
     SLLNode * pWork = _pAIL; // SLLNode * pWork;
-    while ( pWork != nullptr )
+    while ( pWork != NULL )
     {
         pAux = pWork; // Guarda/marca o nó a ser eliminado.
         pWork = pWork->mpNext; // Vamos para o próximo...
         delete pAux; // Remove o marcado.
     }
-    _pAIL = nullptr; // Precisamos fazer o head do cliente apontar para nulo.
+    _pAIL = NULL; // Precisamos fazer o head do cliente apontar para nulo.
 }
 
 
 bool front( const SNPtr _pAIL, int & _retrievedVal )
 {
     // Se a lista for vazia?
-    if ( _pAIL == nullptr )
+    if ( _pAIL == NULL )
         return false;
     _retrievedVal = _pAIL->miData;
     return true;
@@ -77,10 +76,10 @@ bool back( const SNPtr _pAIL, int & _retrievedVal )
 {
     SLLNode * pWork = _pAIL;
     // Avanço até o último.
-    while ( pWork != nullptr )
+    while ( pWork != NULL )
     {
         // Será que este é o último?
-        if ( pWork->mpNext == nullptr )
+        if ( pWork->mpNext == NULL )
         {
             _retrievedVal = pWork->miData;
             return true;
@@ -97,29 +96,29 @@ bool pushFront( SNPtr & _pAIL, int _newVal )
 {
     // Alocando o novo noh para receber os dados.
 
-    SLLNode * ptNew( nullptr );
+    SLLNode * ptNew( NULL );
     try
     {
         ptNew = new SLLNode;
     }
     catch ( std:: bad_alloc& e)
     {
-        std::cerr << "[pushFront()]: Falha da alocação de um novo nó!"
+        std:: cerr << "[pushFront()]: Falha da alocação de um novo nó!";
         throw e;
     }
 
     // Preencher o novo.
     ptNew->miData = _newVal;
-    ptNew->mpNext = nullptr;
+    ptNew->mpNext = NULL;
 
     // Caso especial, lista vazia (primeira inserção).
-    if ( _pAIL == nullptr )
+    if ( _pAIL == NULL )
     {
         _pAIL = ptNew;
     }
     else // Caso regular, a lista possui pelo menos 1 elemento.
     {
-        ptNew->next = _pAIL // Aponta para o (antigo) primeiro.
+        ptNew->mpNext = _pAIL; // Aponta para o (antigo) primeiro.
         _pAIL = ptNew; // O novo noh passa a ser o primeiro da lista;
     }
 
@@ -130,7 +129,40 @@ bool pushFront( SNPtr & _pAIL, int _newVal )
 bool pushBack( SNPtr & _pAIL, int _newVal )
 {
     // Ponteiro de trabalho usado para percorrer a lista
-    SLLNode *pWork( _pAIL );
+    SLLNode *ptNew( NULL );
+    try
+    {
+        ptNew = new SLLNode;
+    }
+    catch ( std:: bad_alloc e)
+    {
+        std:: cerr << "[pushBack()]: Falha de alocação de um novo nó!";
+        throw e;
+    };
+
+    ptNew->miData = _newVal;
+    ptNew->mpNext = NULL;
+
+    if ( _pAIL == NULL )
+    {
+        _pAIL = ptNew;
+    }
+    else
+    {
+        SNPtr pAux = _pAIL;
+        while ( _pAIL != NULL )
+        {
+            if ( pAux->mpNext == NULL )
+            {
+                pAux->mpNext = ptNew;
+                break;
+            }
+            else
+            {
+                pAux = pAux->mpNext;
+            }
+        }
+    }
 
 
     return true;
@@ -139,12 +171,28 @@ bool pushBack( SNPtr & _pAIL, int _newVal )
 
 bool popFront( SNPtr & _pAIL, int & _retrievedVal )
 {
+    // Se a lista for vazia?
+    if ( _pAIL == NULL )
+        return false;
+
+    _retrievedVal = _pAIL->miData;
+    _pAIL = _pAIL->mpNext;
     return true;
 }
 
 
 bool popBack( SNPtr & _pAIL, int& _retrievedVal )
 {
+    SNPtr pAux = _pAIL;
+    SNPtr pNext = NULL;
+
+    if ( _pAIL == NULL )
+        return false;
+    while ( _pAIL != NULL )
+    {
+
+    }
+
     return true;
 }
 

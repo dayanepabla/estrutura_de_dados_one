@@ -2,11 +2,17 @@
 
 #include "les_v1.h"
 #include <iostream>
-using std::cout;
+#include <cstdlib>
+
+using namespace std;
 
 
-int main ( void ) {
-    SNPtr pHead = nullptr;// nullptr;
+int main ( void )
+{
+
+    SNPtr pHead = NULL; // nullptr;
+    int pfront;
+    int pback;
 
     pushFront( pHead, 1 );
     pushFront( pHead, 3 );
@@ -14,8 +20,27 @@ int main ( void ) {
     pushFront( pHead, 7 );
     print( pHead );
 
-    // Testando front()/back()
-    int ret
+    clear( pHead );
+    cout << length( pHead ) << endl;
+
+    cout << empty( pHead ) << endl;
+
+    pushFront( pHead, 2 );
+    pushFront( pHead, 4 );
+    pushFront( pHead, 6 );
+    pushFront( pHead, 8 );
+    pushBack( pHead, 0 );
+    print( pHead );
+
+
+
+    cout << front( pHead, pfront ) << endl;
+
+    cout << back( pHead, pback ) << endl;
+
+    cout << popFront( pHead, pfront ) << endl;
+    print( pHead );
+
 
 
 
