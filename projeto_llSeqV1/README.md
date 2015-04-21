@@ -1,4 +1,4 @@
-Tarefa #1: Classe LLSeq
+Tarefa 1: Classe LLSeq
 =======================
 
 
@@ -16,7 +16,7 @@ No caso da lista ordenada LLSeqOrd você deve imlementar a buscaAux como uma bus
 *modificada*  de maneira que tal busca retorna o índice do elemento procurado ou o índice da
 posição onde o item procurado deveria estar. Isso deve ser feito em O(log n)!
 
-Tarefa #2: Classe AbsStack
+Tarefa 2: Classe AbsStack
 ==========================
 
 Nesta tarefa você deve implementar uma classe StackAr que extende a classe AbsStack (a qual
@@ -39,7 +39,7 @@ acostumar com o uso da classe std::vector.
 O arquivo enviado com a tarefa corresponde a implementação da classe StackAr feita em sala de
 aula.
 
-Tarefa #3: Classe AbsQueue
+Tarefa 3: Classe AbsQueue
 ==========================
 
 Sua tarefa consiste em implementar a classe QueueAr que concretiza a interface definida em
