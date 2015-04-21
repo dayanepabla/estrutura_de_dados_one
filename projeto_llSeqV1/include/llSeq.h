@@ -16,8 +16,10 @@
 
 class LLSeq
 {
-    typedef Chave int;
-    typedef Informacao std::string;
+    public:
+        typedef int Chave;
+        typedef std::string Informacao;
+
     protected:
         struct NoLLSeq {    // Estrutura do noh de um lista seq.
             Chave id;       // A chave eh um inteiro nesta TAD.
@@ -29,14 +31,14 @@ class LLSeq
         int mi_Capacity;          // Capacidade maxima de armazenamento.
         NoLLSeq *mpt_Data;        // Area de armazenamento: vetor estatico.
 
-        int buscaAux( Chave _x ) const = 0; // Metodo de busca.
+        virtual int buscaAux( Chave _x ) const = 0; // Metodo de busca.
 
     public:
         LLSeq ( int _MaxSz = SIZE );
         ~LLSeq ();
         bool busca( Chave _x, Informacao & ) const;             // Busca publica.
         bool remocao( Chave _x, Informacao & );                 // Remove da lista.
-        bool insercao( Chave _novaId, Informacao _novaInfo ) = 0;   // Pure virtual
+        virtual bool insercao( Chave _novaId, Informacao _novaInfo ) = 0;   // Pure virtual
 };
 
 class LLSeqOrd : public LLSeq

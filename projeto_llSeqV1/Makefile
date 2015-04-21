@@ -1,8 +1,10 @@
 all: drive
 
-drive: drive_llSeq.cpp src/listSeq.cpp
+drive: src/drive_llSeq.cpp llseq.o
+	g++ -Wall -std=c++0x src/drive_llSeq.cpp -I ./include -o drive
 
-	g++ -Wall -std=c++0x drive_llSeq.cpp src/listSeq.cpp -I include -o drive
+llseq.o: src/listSeq.cpp
+	g++ -Wall -std=c++0x -I include -c src/listSeq.cpp
 
 clean:
-	rm drive
+	rm drive llseq.o
