@@ -36,32 +36,15 @@ class LLSeq
     public:
         LLSeq ( int _MaxSz = SIZE );
         ~LLSeq ();
+
         bool busca( Chave _x, Informacao & ) const;             // Busca publica.
         bool remocao( Chave _x, Informacao & );                 // Remove da lista.
         virtual bool insercao( Chave _novaId, Informacao _novaInfo ) = 0;   // Pure virtual
-};
 
-class LLSeqOrd : public LLSeq
-{
-    private:
-        int buscaAux( Chave _x ) const; // Metodo de busca.
-
-    public:
-        //bool remocao( Chave _x, Informacao & );// Remove da lista.
-        LLSeqOrd ( int _MaxSz = SIZE );
-        ~LLSeqOrd ();
-};
-
-
-class LLSeqReg : public LLSeq
-{
-    private:
-        int buscaAux( Chave _x ) const; // Metodo de busca.
-
-    public:
-        LLSeqReg ( int _MaxSz = SIZE );
-        ~LLSeqReg ();
-        bool remocao( Chave _x, Informacao & );// Remove da lista em Theta(1).
+        // Alguns métodos úteis.
+        int length() { return this->mi_Length; }
+        bool isEmpty() { return this->mi_Length == 0; }
+        bool isFull() { return this->mi_Length == this->mi_Capacity; }
 };
 
 #endif
