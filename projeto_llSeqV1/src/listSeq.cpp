@@ -28,14 +28,15 @@ bool LLSeq::busca ( LLSeq::Chave _x, LLSeq::Informacao &info ) const
 
 bool LLSeq::remocao ( LLSeq::Chave _x, LLSeq::Informacao &info )
 {
-    int index = buscaAux( _x );
     NoLLSeq aux;
-    aux = mpt_Data[mi_Length-1];
-    mpt_Data[mi_Length-1] = mpt_Data[index];
+    int index = buscaAux( _x );
+
+    aux = mpt_Data[mi_Length - 1];
+    info = aux.info;
+    mpt_Data[mi_Length - 1] = mpt_Data[index];
     mpt_Data[index] = aux;
 
-    mi_Length--;
-    info = mpt_Data[mi_Length+1];
+    --mi_Length;
+
     return true;
 }
-
