@@ -183,15 +183,34 @@ bool popFront( SNPtr & _pAIL, int & _retrievedVal )
 
 bool popBack( SNPtr & _pAIL, int& _retrievedVal )
 {
-    // SNPtr pAux = _pAIL;
-    // SNPtr pNext = NULL;
+    SLLNode *pA = _pAIL;
+    SLLNode *pB = NULL;
+    // SLLNode *pNext = NULL;
 
-    // if ( _pAIL == NULL )
-    //     return false;
-    // while ( _pAIL != NULL )
-    // {
+    // Caso 0: lista vazia.
+    if ( pA == NULL)
+    {
+        return false;
+    }
+    // Caso 1: Um elemento na lista.
+    if ( pA->next == NULL )
+    {
+        _retrievedVal = pA->miData;
+        delete pA;
+        _pAIL = NULL;
+        return true;
+    }
 
-    // }
+    // Caso 2: Dois ou mais elementos na lista.
+    do
+    {
+        pB = pA;
+        pA = pA->mpNext;
+    } while (pA->mpNext != NULL );
+
+    _retrievedVal = pA->miData;
+    delete pA;
+    pB->next = NULL;
 
     return true;
 }
