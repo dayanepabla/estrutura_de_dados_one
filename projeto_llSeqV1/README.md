@@ -48,3 +48,16 @@ Para implementar a fila, utilize o armazenamento por vetor regular, alocado dina
 no construtor e que cresce conforme a necessidade por meio de chamadas aa DoubleArray().
 Faça também um programa de teste, driver_queue.cpp, para testar completamente a classe criada,
 em várias situações.
+
+
+## Compilando
+
+Execute o comando 'make' para compilar o código-fonte do projeto em um arquivo executável chamado 'drive'.
+
+```sh
+$ make
+```
+## Como usar
+
+```sh
+$ ./drive
