@@ -1,17 +1,22 @@
-SRCS = life_test.cpp
+SRCS = $(wildcard *.cpp)
 LIBS = catch.h
-OBJS = life_test.o
+OBJS = $(patsubst %.cpp,%.o,$(SRCS))
+SRCOBJS = $(filter-out ../src/main.o, $(wildcard ../src/*.o))
 PROG = run_tests
-INCLUDES = -I../src
 
 CC = g++
-CFLAGS = -Wall -g -O2
+CFLAGS = -Wall -g -O2 -I../src
 
-$(PROG): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(PROG)
+VPATH = ../src
 
-*.cpp.o: $(SRCS)
-	$(CC) $(CFLAGS) $(INCLUDES) $(SRCS) $(LIBS) -o $(OBJS)
+all: $(PROG) $(OBJS)
+
+
+$(OBJS): %.o: %.cpp
+	$(CC) -c $(CFLAGS) $< -o $@
+
+$(PROG): $(OBJS) $(SRCOBJS)
+	$(CC) $(CFLAGS) $(OBJS) $(SRCOBJS) -o $(PROG)
 
 clean:
 	rm -f run_tests $(OBJS)
