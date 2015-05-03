@@ -1,24 +1,43 @@
 #include "cell.h"
 
 Cell::Cell()
-    : _neighbors(new std::vector<Cell>()) {}
+    : _organism(nullptr) {}
+
+Cell::Cell(Organism* organism)
+    : _organism(organism) {}
 
 Cell::~Cell()
 {
-    delete this->_neighbors;
+    delete _organism;
 }
 
-bool Cell::empty()
+bool Cell::is_empty()
 {
-    return true;
+    return !has_organism();
 }
 
-bool Cell::dead()
+bool Cell::is_dead()
 {
-    return this->empty();
+    return is_empty() || this->_organism->is_dead();
 }
 
-std::vector<Cell>* Cell::neighbors()
+bool Cell::is_alive()
 {
-    return this->_neighbors;
+    return _organism->is_alive();
+}
+
+bool Cell::has_organism()
+{
+    return _organism != nullptr;
+}
+
+void Cell::kill()
+{
+    delete _organism;
+    _organism = nullptr;
+}
+
+void Cell::revive(Organism* organism)
+{
+    _organism = organism;
 }

@@ -3,19 +3,36 @@
 
 #include <vector>
 
+#include "organism.h"
+
+/**
+ * @brief Uma célula do jogo.
+ *
+ * Esta classe representa uma célula do jogo, responsável por manter um organismo.
+ */
 class Cell
 {
     public:
+        /**
+         * Construtor.
+         *
+         * Initializa uma célula vazia ou morta, ou seja, sem organismo.
+         */
         Cell();
         ~Cell();
 
-        bool empty();
-        bool dead();
+        Cell(Organism* organism);
 
-        std::vector<Cell>* neighbors();
+        bool is_empty();
+        bool is_dead();
+        bool is_alive();
+        bool has_organism();
+
+        void kill();
+        void revive(Organism* organism);
 
     private:
-        std::vector<Cell>* _neighbors;
+        Organism* _organism;
 };
 
 #endif
