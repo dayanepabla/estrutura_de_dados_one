@@ -5,7 +5,7 @@ SRCOBJS = $(filter-out ../src/main.o, $(wildcard ../src/*.o))
 PROG = run_tests
 
 CC = g++
-CFLAGS = -Wall -g -O2 -I../src
+CFLAGS = -Wall -g -O2 -I../src -std=c++11
 
 VPATH = ../src
 
