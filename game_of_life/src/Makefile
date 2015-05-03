@@ -4,7 +4,7 @@ OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 PROG = main
 
 CC = g++
-CFLAGS = -Wall -g -O2 -I.
+CFLAGS = -Wall -g -O2 -I. -std=c++11
 
 all: $(PROG) $(OBJS)
 
