@@ -29,7 +29,32 @@
 *.exe
 *.out
 *.app
-*.bin
+bares
+run_tests
 
-### Tup ###
-.tup
+
+### Linux ###
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+*.d
+
+*.zip
+lista00/compacta_vet
+lista00/dist_pts
+lista00/fib01
+lista00/intervalos
+lista00/menor_elemento
+lista00/soma
+lista00/troca_interna
+lista00/troca_seguintes
+lista00/vet5
+lista_complexidade/Relatório Técnico - Análise Empírica.pdf
+lista_complexidade/maxSubSum
+lista_encadeada/drive_les_v1
+projeto_llSeqV1/drive
