@@ -5,7 +5,7 @@ OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 DEPFILES = $(patsubst %.cpp,%.d,$(SRCS))
 
 CC = g++
-CFLAGS = -Wall -g -O2 -I. -std=c++11
+CFLAGS = -Wall -g -O2 -I. -std=c++11 -lncurses
 
 
 all: $(PROG) $(OBJS)
@@ -18,7 +18,7 @@ all: $(PROG) $(OBJS)
 $(OBJS): %.o: %.cpp $(SRCS) $(HDRS)
 	$(CC) -c $(CFLAGS) $< -o $@
 
-$(PROG): $(OBJS)
+$(PROG): $(OBJS) main.cpp
 	$(CC) $(CFLAGS) $(OBJS) main.cpp -o $(PROG)
 
 clean:
