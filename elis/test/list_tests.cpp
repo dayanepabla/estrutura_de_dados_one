@@ -2,6 +2,8 @@
 #include <iostream>
 #include "list.h"
 
+using namespace Elis;
+
 SCENARIO("we can create an empty list", "[list]")
 {
     GIVEN("a list")
@@ -75,7 +77,10 @@ SCENARIO("we can pop out an item", "[list]")
 
         WHEN("an item is poped out")
         {
-            std::string item = list.pop();
+            THEN("we get nothing")
+            {
+                REQUIRE(list.pop() == "");
+            }
         }
     }
 }
