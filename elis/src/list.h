@@ -3,30 +3,34 @@
 
 #include <iostream>
 
-class List
+namespace Elis
 {
-    private:
-        struct Node {
-            std::string data;
-            Node *next;
+    class List
+    {
+        private:
+            struct Node {
+                std::string data;
+                Node *next;
 
-            Node(const std::string &d, Node* n = nullptr):
-                data(d), next(n) {}
-        };
+                Node(const std::string &d, Node* n = nullptr):
+                    data(d), next(n) {}
+            };
 
-    public:
-        List();
-        ~List();
+        public:
+            List();
+            ~List();
 
-        int size();
-        bool is_empty();
-        std::string& pop();
-        std::string& first();
-        void push_front(std::string &str);
+            int size();
+            bool is_empty();
+            std::string pop();
+            std::string& first();
+            void push_front(std::string &str);
 
-    private:
-        int elements;
-        Node* head;
-        Node* tail;
-};
+        private:
+            int elements;
+            Node* head;
+            Node* tail;
+    };
+}
+
 #endif
