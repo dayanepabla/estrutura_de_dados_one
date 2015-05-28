@@ -14,6 +14,9 @@ class Elis::UI::Window
         Window();
         ~Window();
 
+        void show();
+        void hide();
+
     private:
         WINDOW *window;
 };

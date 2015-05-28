@@ -1,6 +1,6 @@
 PROG = ../elis
 SRCS = $(filter-out main.cpp, $(wildcard *.cpp)) $(wildcard */*.cpp)
-HDRS = $(wildcard *.h)
+HDRS = $(wildcard *.h) $(wildcard */*.h)
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 DEPFILES = $(patsubst %.cpp,%.d,$(SRCS))
 

@@ -11,17 +11,13 @@
 
 int main(int argc, char const *argv[])
 {
-    // int key;
-    // int line = 1;
+    Elis::Application *app;
 
-    // std::stringstream output;
+    app = new Elis::Application();
 
-    Elis::UI::Window window;
-    Elis::Application app;
+    app->initialize(argc, argv);
 
-    // app = Elis::Application();
-
-    // app->initialize(argc, argv);
+    app->run();
 
     // // Ncurses configuration
     // initscr();

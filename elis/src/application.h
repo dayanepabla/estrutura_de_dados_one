@@ -12,8 +12,10 @@ class Elis::Application
         ~Application();
 
         void initialize(int argc, char const *argv[]);
+        void run();
 
     private:
+        void configure_ncurses();
         void parse_command_line(int argc, char const *argv[]);
 
     private:
