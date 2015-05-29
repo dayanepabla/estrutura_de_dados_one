@@ -4,7 +4,7 @@ HDRS = $(wildcard *.h) $(wildcard */*.h)
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 DEPFILES = $(patsubst %.cpp,%.d,$(SRCS))
 
-CC = g++
+CC = g++-4.8
 CFLAGS = -Wall -g -O2 -I. -std=c++11
 
 

@@ -1,4 +1,4 @@
-CC = g++
+CC = g++-4.8
 CFLAGS = -Wall -g -std=c++11
 SRCDIR = src
 TESTDIR = test

@@ -1,6 +1,8 @@
 #ifndef _APPLICATION_H_
 #define _APPLICATION_H_
 
+#include <iostream>
+
 #include "ui/window.h"
 
 namespace Elis { class Application; }
@@ -19,6 +21,10 @@ class Elis::Application
         void parse_command_line(int argc, char const *argv[]);
 
     private:
+        std::string filename;
+        std::string current_line;
+        Elis::List<std::string> lines;
+
         Elis::UI::Window *window;
 };
 

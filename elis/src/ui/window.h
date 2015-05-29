@@ -3,6 +3,9 @@
 
 #include <ncurses.h>
 
+#include "list.cpp"
+#include "line.h"
+
 namespace Elis
 {
     namespace UI { class Window; }
@@ -16,9 +19,12 @@ class Elis::UI::Window
 
         void show();
         void hide();
+        Elis::UI::Line new_line(const char *c = "");
 
     private:
         WINDOW *window;
+        Elis::UI::Line *current_line;
+        Elis::List<Elis::UI::Line> *lines;
 };
 
 #endif

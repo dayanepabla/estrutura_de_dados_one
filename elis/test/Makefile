@@ -2,11 +2,11 @@ PROG = ../run_tests
 SRCS = $(wildcard *.cpp)
 LIBS = catch.h
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
-SRCOBJS = $(filter-out ../src/main.o, $(wildcard ../src/*.o)) $(wildcard */*.o)
+SRCOBJS = $(filter-out ../src/main.o, $(wildcard ../src/*.o)) $(wildcard ../src/*/*.o)
 DEPFILES = $(patsubst %.cpp,%.d,$(SRCS))
 
-CC = g++
-CFLAGS = -Wall -g -O2 -I ../src -std=c++11
+CC = g++-4.8
+CFLAGS = -Wall -g -O2 -I ../src -std=c++11 -lncurses
 
 VPATH = ../src
 

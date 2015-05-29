@@ -1,6 +1,7 @@
 #include "catch.h"
 #include <iostream>
-#include "list.h"
+
+#include "list.cpp"
 
 using namespace Elis;
 
@@ -8,11 +9,11 @@ SCENARIO("we can create an empty list", "[list]")
 {
     GIVEN("a list")
     {
-        List list = List();
+        auto list = List<int>();
 
         THEN("it is empty")
         {
-            REQUIRE(list.is_empty() == true);
+            REQUIRE(list.empty() == true);
         }
     }
 }
@@ -21,9 +22,9 @@ SCENARIO("we can push front an item", "[list]")
 {
     GIVEN("an empty list")
     {
-        List list = List();
+        auto list = List<std::string>();
 
-        REQUIRE(list.is_empty() == true);
+        REQUIRE(list.empty() == true);
 
         WHEN("an item is pushed")
         {
@@ -38,7 +39,7 @@ SCENARIO("we can push front an item", "[list]")
 
             THEN("the first item is foobar")
             {
-                REQUIRE(list.first() == "foobar");
+                REQUIRE(list.front() == "foobar");
             }
         }
     }
@@ -48,16 +49,16 @@ SCENARIO("we can get the first item", "[list]")
 {
     GIVEN("a non empty list")
     {
-        List list = List();
+        auto list = List<std::string>();
         std::string str = "foobar";
 
         list.push_front(str);
 
-        REQUIRE(list.is_empty() == false);
+        REQUIRE(list.empty() == false);
 
         WHEN("first is called")
         {
-            std::string first = list.first();
+            std::string first = list.front();
 
             THEN("we get it")
             {
@@ -69,17 +70,34 @@ SCENARIO("we can get the first item", "[list]")
 
 SCENARIO("we can pop out an item", "[list]")
 {
-    GIVEN("an empty list")
+    GIVEN("a non empty list")
     {
-        List list = List();
+        auto list = List<std::string>();
 
-        REQUIRE(list.is_empty() == true);
+        list.push_front("something");
 
-        WHEN("an item is poped out")
+        REQUIRE(list.empty() == false);
+        REQUIRE(list.size() == 1);
+
+        WHEN("an item is front poped out")
         {
-            THEN("we get nothing")
+            list.pop_front();
+
+            THEN("the size reduces by one")
             {
-                REQUIRE(list.pop() == "");
+                REQUIRE(list.size() == 0);
+                REQUIRE(list.empty() == true);
+            }
+        }
+
+        WHEN("an item is back poped out")
+        {
+            list.pop_back();
+
+            THEN("the size reduces by one")
+            {
+                REQUIRE(list.size() == 0);
+                REQUIRE(list.empty() == true);
             }
         }
     }
